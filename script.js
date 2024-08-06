@@ -18,9 +18,27 @@ function remainder(a, b) {
     return a % b;
 }
 
-let num1 = 0;
-let num2 = 0;
-let operator = '';
+
+
+function getValues() {
+    let num1 = 0;
+    let num2 = 0;
+    let operator = '';
+
+    const numbers = document.querySelectorAll('.number');
+    const display = document.querySelector('.display');
+
+    numbers.forEach((num) => {
+        num.addEventListener('click',() => {
+            console.log(num.textContent)
+            display.textContent += num.textContent;
+        })
+    })
+
+
+}
+
+getValues();
 
 function operate(operator, a, b) {
     switch(operator) {
