@@ -89,3 +89,14 @@ button:active {
     background-color: rgba(252, 105, 105, 0.87);
 }
 
+.blue {
+    background-color: rgba(105, 255, 255, 0.832);
+}
+
+.blue:hover {
+    background-color: rgba(101, 246, 246, 0.832);
+}
+
+.blue:active {
+    background-color: rgba(82, 235, 235, 0.884);
+}
