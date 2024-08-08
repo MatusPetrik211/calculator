@@ -20,8 +20,8 @@ function remainder(a, b) {
 
 function operate(operator, a, b) {
     switch(operator) {
-        case '+': return (add(a, b)).toFixed(3); 
-        case '-': return(subtract(a, b)).toFixed(3);
+        case '+': return(add(a, b)); 
+        case '-': return(subtract(a, b));
         case '×': return(multiply(a, b)).toFixed(3);
         case '÷': return(divide(a, b)).toFixed(3); 
         case '%': return(remainder(a, b)).toFixed(3);
