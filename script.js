@@ -50,6 +50,13 @@ function getValues() {
     const clearAll = document.querySelector('.clear-all');
     const clear = document.querySelector('.clear');
     const equal = document.querySelector('.equal');
+    const dot = document.querySelector('.dot');
+
+    dot.addEventListener('click', () => {
+        if(!display.textContent.includes('.')) {
+            display.textContent += dot.textContent;
+        }
+    })
 
     clearAll.addEventListener('click', () => {
         display.textContent = '';
