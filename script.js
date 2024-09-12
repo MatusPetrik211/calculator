@@ -28,16 +28,6 @@ function operate(operator, a, b) {
     }
 }
 
-function checkBool(bool) {
-    if(bool) {
-        return true;
-    }
-    else if(!bool) {
-        return false;
-    }
-}
-
-
 function getValues() {
     let num1 = 0;
     let num2 = 0;
@@ -84,7 +74,6 @@ function getValues() {
             else {
                 num1 = display.textContent;
             }
-            console.log(`num1: ${num1}, num2: ${num2}`);
         })
     })
       
@@ -92,8 +81,7 @@ function getValues() {
     symbols.forEach((symbol) => {
         symbol.addEventListener('click',() => {
             let dis = display.textContent;
-            console.log(dis);
-            if(dis.includes('+') || (dis.includes('-') && +num1 > 0) || dis.includes('×') 
+            if(dis.includes('+') || (dis.includes('-') && +num1 >= 0) || dis.includes('×') 
                 || dis.includes('÷') || dis.includes('%')) {
                     display.textContent = operate(operator, +num1, +num2);
                     num1 = operate(operator, +num1, +num2);
